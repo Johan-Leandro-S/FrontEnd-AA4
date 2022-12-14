@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Lista de ActoresPeliculas</h1>
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ID ActoresPeliculas</th>
+          <th scope="col">Actores</th>
+          <th scope="col">Peliculas</th>
+          <th scope="col">Eliminar ActoresPeliculas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let actorpelicula of actorespeliculas">
+          <th scope="row"> {{actorpelicula.aIdActorpelicula}} </th>
+          <td>{{ actorpelicula.aIdActor}}</td>
+          <td>{{ actorpelicula.aIdPelicula}}</td>
+          <td><button class="btn btn-danger" (click)="delete(actorpelicula)" >Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    

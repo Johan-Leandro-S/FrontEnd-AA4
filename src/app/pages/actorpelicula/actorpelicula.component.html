@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  <a routerLink="/home" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>home</mat-icon>
+  </a>
+  <span class="example-spacer">Portal Cinema</span>
+  <a routerLink="/login" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Cierre Sesion
+  </a>
+  <a routerLink="/pelicula" mat-icon-button class="example-icon favorite-icon mr20 ml20 " aria-label="Example icon-button with heart icon">
+    Peliculas
+  </a>
+  <a routerLink="/actor" mat-icon-button class="example-icon favorite-icon mr20 ml20 " aria-label="Example icon-button with heart icon">
+    Actores
+  </a>
+  <a routerLink="/actorpelicula" mat-icon-button class="example-icon favorite-icon mr20 ml20 " aria-label="Example icon-button with heart icon">
+    ActorPelicula
+  </a>
+</mat-toolbar>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row" style="margin-top: 20px">
+        <div class="col-md-6 offset-md-3">
+          <div class="container text-center">
+            <img src="../../../assets/add-user.png" width="80" height="80">
+          </div>
+          <h1 class="text-center">Registre la pelicula y actor aquí</h1>
+          <form (ngSubmit)="formSubmit()">
+  <!-- CASILLA PARA EL TELEFONO-->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Id de la pelicula</mat-label>
+              <input type="tel" [(ngModel)] = "useractorpelicula.aIdActor" name="aTelefono" matInput placeholder ="Digite el id del actor">
+            </mat-form-field>
+  <!-- CASILLA PARA EL TELEFONO-->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Id del actor</mat-label>
+              <input type="tel" [(ngModel)] = "useractorpelicula.aIdPelicula" name="aTelefono" matInput placeholder ="Digite el id de la pelicula">
+            </mat-form-field>
+  <!-- BOTONES-->
+            <div class="container text-center">
+              <button  mat-raised-button color="primary" onclick="location.href=location.href">Guardar</button>
+              <button type="reset"mat-raised-button color="accent">Limpiar</button>
+            </div>
+  
+  
+  
+  
+          </form>
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <app-lista-actorpelicula></app-lista-actorpelicula>

@@ -1,0 +1,72 @@
+<mat-toolbar color="primary">
+  <a routerLink="/home" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>home</mat-icon>
+  </a>
+  <span class="example-spacer">Portal Cinema</span>
+  <a routerLink="/login" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Iniciar sesión
+  </a>
+  <a routerLink="/signup" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Registrarse
+  </a>
+</mat-toolbar>
+
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-6 offset-md-3">
+        <div class="container text-center">
+          <img src="../../../assets/add-user.png" width="80" height="80">
+        </div>
+        <h1 class="text-center">Registrese aquí</h1>
+        <form (ngSubmit)="formSubmit()">
+
+          <!-- CASILLA PARA EL USUARIO-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input required [(ngModel)] = "user.aUserUsuario" name="aUserUsuario" matInput placeholder ="Digite el username de usuario" type="text">
+            <mat-hint>El username debe ser unico</mat-hint>
+          </mat-form-field>
+<!-- CASILLA PARA EL PASWOORD-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password del usuario</mat-label>
+            <input required [(ngModel)] = "user.aPasswordUsuario" name="aPasswordUsuario" matInput placeholder ="Digite el password del usuario" type="password">
+          </mat-form-field>
+<!-- CASILLA PARA EL NOMBRE USUARIO-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Nombre del usuario</mat-label>
+            <input required [(ngModel)] = "user.aNombreUsuario" name="aNombreUsuario" matInput placeholder ="Digite el nombre del usuario" type="text">
+          </mat-form-field>
+<!-- CASILLA PARA EL APELLIDO DEL USUSARIO-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Apellido del usuario</mat-label>
+            <input required [(ngModel)] = "user.aApellidoUsuario" name="aApellidoUsuario" matInput placeholder ="Digite el apellido del usuario" type="text">
+          </mat-form-field>
+<!-- CASILLA PARA EL EMAIL-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Correo del usuario</mat-label>
+            <input required [(ngModel)] = "user.aEmailUsuario" name="aEmailUsuario" matInput placeholder ="Digite el correo del usuario" type="email">
+          </mat-form-field>
+<!-- CASILLA PARA EL TELEFONO-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Telefono del usuario</mat-label>
+            <span matPrefix>+51 &nbsp;</span>
+            <input type="tel" [(ngModel)] = "user.aTelefono" name="aTelefono" matInput placeholder ="555-444-333">
+          </mat-form-field>
+<!-- BOTONES-->
+          <div class="container text-center">
+            <button  mat-raised-button color="primary" onclick="location.href= location.href">Guardar</button>
+            <button type="reset"mat-raised-button color="accent">Limpiar</button>
+          </div>
+
+
+
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

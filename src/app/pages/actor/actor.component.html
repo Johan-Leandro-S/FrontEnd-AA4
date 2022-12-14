@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+  <a routerLink="/home" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>home</mat-icon>
+  </a>
+  <span class="example-spacer">Portal Cinema</span>
+  <a routerLink="/login" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+    Cierre Sesion
+  </a>
+  <a routerLink="/pelicula" mat-icon-button class="example-icon favorite-icon mr20 ml20 " aria-label="Example icon-button with heart icon">
+    Peliculas
+  </a>
+  <a routerLink="/actor" mat-icon-button class="example-icon favorite-icon mr20 ml20 " aria-label="Example icon-button with heart icon">
+    Actores
+  </a>
+  <a routerLink="/actorpelicula" mat-icon-button class="example-icon favorite-icon mr20 ml20 " aria-label="Example icon-button with heart icon">
+    ActorPelicula
+  </a>
+</mat-toolbar>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row" style="margin-top: 20px">
+        <div class="col-md-6 offset-md-3">
+          <div class="container text-center">
+            <img src="../../../assets/add-user.png" width="80" height="80">
+          </div>
+          <h1 class="text-center">Registrese actor aquí</h1>
+          <form (ngSubmit)="formSubmit()">
+  
+            <!-- CASILLA PARA EL USUARIO-->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre del actor</mat-label>
+              <input required [(ngModel)] = "useractor.aNombreactor" name="aUserUsuario" matInput placeholder ="Digite el username de usuario" type="text">
+              <mat-hint>El username debe ser unico</mat-hint>
+            </mat-form-field>
+  <!-- CASILLA PARA EL NOMBRE USUARIO-->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Apellido del actor</mat-label>
+              <input required [(ngModel)] = "useractor.aApellido" name="aNombreUsuario" matInput placeholder ="Digite el nombre del usuario" type="text">
+            </mat-form-field>
+  <!-- BOTONES-->
+            <div class="container text-center">
+              <button mat-raised-button color="primary" onclick="location.href=location.href" >Guardar</button>
+              <button type="reset"mat-raised-button color="accent">Limpiar</button>
+            </div>
+  
+  
+  
+  
+          </form>
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <app-lista-actor></app-lista-actor>
